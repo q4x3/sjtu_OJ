@@ -19,6 +19,16 @@ class bint {
             data[i] = obj.data[i];
         }
     }
+    bint add_zeros2(int n) {
+        bint tmp;
+        for(int i = len + n - 1;i >= n;-- i) {
+            tmp.data[i] = data[i - n];
+        }
+        for(int i = 0;i < n;++ i)
+            tmp.data[i] = '0';
+        tmp.len = n + len;
+        return tmp;
+    }
     void add_zeros(int n) {
         for(int i = len;i < len + n;++ i)
             data[i] = '0';
@@ -72,6 +82,19 @@ class bint {
         }
         tmp.len = cnt + 1;
         tmp.del_zeros();
+        if(tmp.data[0] == 0) tmp.data[0] = '0';
+        return tmp;
+    }
+    bint operator%(bint &obj) {
+        int cnt = len - 1;
+        bint tmp = *this;
+        for(int i = cnt;i >= 0;-- i) {
+            bint div = obj.add_zeros2(i);
+            while(1) {
+                if(div > tmp) break;
+                tmp = tmp - div;
+            }
+        }
         return tmp;
     }
     bool operator>(const bint &obj) {
@@ -94,6 +117,12 @@ class bint {
             data[i] = (tmp + carry * 10) / 2 + '0';
             carry = tmp % 2;
         }
+        for(int i = len - 1;i >= 0;-- i)
+            if(data[i] != '0') {
+                len = i + 1;
+                break;
+            }
+        del_zeros();
         return carry;
     }
 };
@@ -118,17 +147,21 @@ int main() {
     cin >> t1 >> t2;
     int ans[2000] = {0};
     while(1) {
+        if(strcmp(t1.data, "0") == 0) break;
+        if(strcmp(t2.data, "0") == 0) break;
         if(t1 > t2) {
-            t1 = t1 - t2;
+            t1 = t1 % t2;
             continue;
         } else if(t1 == t2) break;
         else {
-            t2 = t2 - t1;
+            t2 = t2 % t1;
             continue;
         }
     }
     int cnt = 0;
-    while(strcmp(t1.data, "0")) {
+    if(t2 > t1) t1 = t2;
+    while(1) {
+        if(strcmp(t1.data, "0") == 0) break;
         ans[cnt] = t1.div_2();
         ++ cnt;
     }
