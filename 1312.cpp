@@ -8,7 +8,12 @@ int main() {
     cin >> T;
     for(int i = 0;i < T;++ i) {
         cin >> n >> k;
-        if(n % (k + 1) == 0) cout << "Yeah!" << endl;
-        else cout << "5555" << endl;
+        if(k == 1) {
+            if(n % 2 == 0) cout << "Yeah!" << endl;
+            else cout << "5555" << endl;
+        } else {
+            if(n <= k) cout << "5555" << endl;
+            else cout << "Yeah!" << endl;
+        }
     }
 }

@@ -15,13 +15,7 @@ int main(){
 	int i,n;
     cin >> n;
 	rand_of_n(a,n);   
-	for(i=0;i<n/3;i++)
-		cout<<a[i]<<" ";
-    cout << endl;
-	for(i=n/3;i<2*n/3;i++)
-		cout<<a[i]<<" ";
-    cout << endl;
-	for(i=2*n/3;i<n;i++)
+	for(i=0;i<n;i++)
 		cout<<a[i]<<" ";
     cout << endl;
 	return 0; 
@@ -36,7 +30,7 @@ void rand_of_n(int a[],int n){
 	srand((int)time(0));  // 初始化随机数种子 
 	for(i=0;i<n;i++){
 		ele[i].data=rand();  // 随机生成一个数 
-		ele[i].index=i+1;
+		ele[i].index=i;
 	}
 	qsort(ele,n,sizeof(ele[0]),cmp);  //排序 
 	for(i=0;i<n;i++){
