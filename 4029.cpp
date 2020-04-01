@@ -1,3 +1,7 @@
+/**
+ * 最短路 spfa算法
+ * 答案数组中dis[k]存储mod m余k的数中可以被凑出的最小总价
+ **/
 #include <iostream>
 #include <stdio.h>
 

@@ -1,3 +1,8 @@
+/**
+ * dp
+ * f[n] = f[1] + f[2] + ... + f[n / 2]
+ * 注意long long
+ **/
 #include <iostream>
 
 using namespace std;

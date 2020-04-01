@@ -1,3 +1,7 @@
+/**
+ * 数学题
+ * 赌王划什么，Juda划对称的
+ **/
 #include <iostream>
 
 using namespace std;

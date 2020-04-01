@@ -1,3 +1,7 @@
+/**
+ * 括号栈模拟
+ * 优化？
+ **/
 #include <iostream>
 #include <stdio.h>
 using namespace std;

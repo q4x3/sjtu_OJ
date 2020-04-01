@@ -1,3 +1,8 @@
+/**
+ * 数学题
+ * 排个序就清楚了
+ * long long
+ **/
 #include <iostream>
 
 using namespace std;
