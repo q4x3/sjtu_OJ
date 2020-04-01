@@ -1,11 +1,14 @@
+/**
+ * 括号匹配
+ * dp
+ * 按第一个字符分类:
+ * ‘a’: f[n - 1]
+ * '(': 按对应')'位置，若为j，则f[j - 1] * f[n - j - 1]
+ **/
 #include <iostream>
 
 using namespace std;
-/*dp
- *按第一个字符分类
- *a:f[n - 1]
- *'(':按对应')'位置，若为j，则f[j - 1] * f[n - j - 1]
- */
+
 int f[3340];
 int main() {
     int N;

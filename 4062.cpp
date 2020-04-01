@@ -1,3 +1,8 @@
+/**
+ * 模拟
+ * 将矩形较短的边作为正方形边长
+ * 注意long long
+ **/
 #include <iostream>
 
 using namespace std;

@@ -1,3 +1,11 @@
+/**
+ * 高精度GCD + 二进制转换
+ * 字符串存数据
+ * 高精度减法没什么好说的
+ * 高精度取模就是补零做减法
+ * 辗转相除求GCD
+ * 再转二进制，不停地除以二就行
+ **/
 #include <iostream>
 #include <cstring>
 using namespace std;

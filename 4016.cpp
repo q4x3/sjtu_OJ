@@ -1,3 +1,8 @@
+/**
+ * 模拟
+ * 算24点，不超过24的最大结果
+ * 屎山，注意细节处理即可
+ **/
 #include <iostream>
 
 using namespace std;

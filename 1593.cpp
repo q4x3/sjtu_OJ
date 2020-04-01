@@ -1,3 +1,9 @@
+/**
+ * 模拟
+ * 直接归并排序过不了
+ * 这种和一定的(1 + 1 = 0 + 2)
+ * 扫描交换三次即可全序
+ **/
 #include <iostream>
  
 using namespace std;

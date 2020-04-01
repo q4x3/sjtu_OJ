@@ -1,3 +1,8 @@
+/**
+ * 模拟
+ * 排序后判断水淹到了哪里(扫描)
+ * 注意处理全淹了的情况
+ **/
 #include <iostream>
 #include <iomanip>
 
