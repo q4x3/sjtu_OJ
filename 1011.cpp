@@ -1,3 +1,6 @@
+/**
+ * 复数类
+ **/
 #include <iostream>
 #include <iomanip>
 using namespace std;

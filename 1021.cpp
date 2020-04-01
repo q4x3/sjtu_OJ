@@ -1,3 +1,6 @@
+/**
+ * 模拟
+ **/
 #include <iostream>
 #include <iomanip>
 

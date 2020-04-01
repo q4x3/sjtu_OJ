@@ -1,9 +1,15 @@
+/**
+ * 二分
+ * 找到不大于tmp的最大a，a[lo - 1] (a[lo]为比tmp大的最小a)
+ * 故lo个a可以
+ **/
 #include <iostream>
 
 using namespace std;
 
 int N, K, lo, hi, mi;
 double a[100233];
+
 int main() {
     cin >> N;
     for(int i = 0;i < N;++ i) {

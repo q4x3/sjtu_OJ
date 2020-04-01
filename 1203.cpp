@@ -1,3 +1,6 @@
+/**
+ * 链表合并
+ **/
 #include <iostream>
 
 using namespace std;

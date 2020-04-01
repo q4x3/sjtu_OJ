@@ -1,3 +1,7 @@
+/**
+ * 递归
+ * 想简单了，数据水才过的
+ **/
 #include <iostream>
 
 using namespace std;

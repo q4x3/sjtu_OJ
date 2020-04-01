@@ -1,3 +1,7 @@
+/**
+ * 模拟
+ * 处理空格
+ **/
 #include <iostream>
 using namespace std;
 int main()

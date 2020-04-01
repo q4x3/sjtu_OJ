@@ -1,3 +1,8 @@
+/**
+ * 归并排序
+ * 排序不等式
+ * 注意long long
+ **/
 #include <iostream>
 
 using namespace std;
