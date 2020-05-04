@@ -59,9 +59,9 @@ int query(int rt, int l, int r, int s, int t) {
     int mid = (l + r) >> 1;
     pushdown(rt, l, r);
     if(t <= mid) return query(rt << 1, l, mid, s, t);
-    // 区间[s, t]与左儿子[l, mid]有交
+    // 区间[s, t]只与左儿子[l, mid]有交
     else if(s > mid) return query(rt << 1 | 1, mid + 1, r, s, t);
-    // 区间[s, t]与右儿子[mid + 1, r]有交
+    // 区间[s, t]只与右儿子[mid + 1, r]有交
     else return query(rt << 1, l, mid, s, t)
               + query(rt << 1 | 1, mid + 1, r, s, t);
     // 区间[s, t]同时与左儿子和右儿子有交
