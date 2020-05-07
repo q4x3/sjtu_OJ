@@ -1,6 +1,3 @@
-/**
- * 链表实现大整数类
- **/
 #include <iostream>
 #include <cstdio>
 using namespace std;
@@ -24,7 +21,7 @@ public:
         tail->next = NULL;
         tail->last = head;
     }
-
+ 
     NODE* move(int i) {
         NODE *ith = head;
         int k = 0;
@@ -34,7 +31,7 @@ public:
         }
         return ith;
     }
-
+ 
     void insert(int i, int x) {
         ++ len;
         NODE *ptr = new NODE;
@@ -46,7 +43,7 @@ public:
         ptr->next->last = ptr;
         return;
     }
-
+ 
     void remove(int i) {
         --len;
         NODE *tmp = move(i);
@@ -55,11 +52,11 @@ public:
         delptr->next->last = tmp;
         delete delptr;
     }
-
+ 
     int Get_length() {
         return len;
     }
-
+ 
     int Query(int i) {
         if (i >= len) return -1;
         else return move(i)->next->data;
