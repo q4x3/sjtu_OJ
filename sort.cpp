@@ -1,6 +1,5 @@
 template <typename T>
-void merge(int lo, int mi, int hi, T* a)
-{
+void merge(int lo, int mi, int hi, T* a) {
     T* A = a + lo;
     int lb = mi - lo;
     T* B = new T[lb];
@@ -35,10 +34,21 @@ void merge(int lo, int mi, int hi, T* a)
 }
 
 template <typename T>
-void mergeSort(int lo, int hi, T* A)
-{
+void mergeSort(int lo, int hi, T* A) {
     if(hi - lo < 2) return;
     int mi = (lo + hi) / 2;
     mergeSort(lo, mi, A); mergeSort(mi, hi, A);
     merge(lo, mi, hi, A);
+}
+
+template <typename T>
+void shellSort(T* A, int size) {
+    for(int gap = size >> 1;gap > 0;gap >>= 1)
+        for(int i = gap;i < size;++ i) {
+            int tmp = A[i];
+            int j = i - gap;
+            for(;j >= 0 && A[j] > tmp;j -= gap)
+                A[j + gap] = A[j];
+            A[j + gap] = tmp;
+        }
 }

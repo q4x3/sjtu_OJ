@@ -11,13 +11,14 @@ struct element{     //用来排序的数据结构
 int cmp(const void *a,const void *b); //升序排列 
 void rand_of_n(int a[],int n);  //产生 1-n 的随机排列并存到 a[] 中 
 int main(){
+	freopen("a1.in", "w", stdout);
 	int a[MAX];
 	int i,n;
     cin >> n;
 	rand_of_n(a,n);   
 	for(i=0;i<n;i++)
-		cout<<a[i]<<" ";
-    cout << endl;
+		cout<<"* "<<a[i]<<endl;
+    //cout << endl;
 	return 0; 
 }
  
